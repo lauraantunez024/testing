@@ -1,0 +1,372 @@
+/* Main color palette */
+
+:root {
+  --primary-color: #3e2723;
+  --secondary-color: #dd6a41;
+  --accent-color: #ffdab9;
+  --natural-brown: #7e5835
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.primary {
+  color: var(--primary-color);
+}
+.secondary {
+  color: var(--secondary-color);
+}
+.accent {
+  color: var(--accent-color);
+}
+.primary-background {
+  background-color: var(--primary-color);
+  z-index: 0;
+  width: 100vw;
+}
+.secondary-background {
+  background-color: var(--secondary-color);
+}
+.accent-background {
+  background-color: var(--accent-color);
+  max-width: 100%;
+}
+
+body {
+  overflow-x: hidden !important;
+  max-width: 100%;
+}
+
+/* Global CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.w-screen {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+
+
+body {
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  font-family: "Work_Sans";
+  width: 100vw !important;
+  overflow-x: hidden;
+}
+/* 
+h1 {
+  font-size: clamp(1rem, 2rem, 3rem)
+} */
+
+a.column h1 {
+  font-size: clamp(1rem, 1vw + 5vw, 2rem);
+  padding: 1rem;
+}
+a.column h2 {
+  /* font-size: clamp(1vw, 1vw + 1vw, vw); */
+  /* padding: 1rem; */
+}
+
+.logo {
+  left: 70%;
+}
+
+@media header {
+  max-width: 100%;
+}
+
+section {
+  overflow: hidden;
+  max-height: 100%;
+  margin: 0%;
+  padding-bottom: 2vh;
+
+  /* padding: 2rem 1rem; */
+  max-width: 100%;
+}
+
+.scrollable {
+}
+
+.animation {
+  transition: all 0.2s ease-in-out;
+}
+.animation:hover {
+  transform: scale(1.2);
+}
+
+/* Home page - landing section */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-content {
+  padding: 3rem;
+}
+/* Home page - skills section */
+.skill-shape {
+  box-shadow: var(--natural-brown) 1rem 1rem;
+  border-radius: 1rem;
+}
+.skills {
+  justify-content: space-between;
+}
+/* Home page -  about section*/
+.aboutme-shape {
+  box-shadow: var(--natural-brown) 15px 15px;
+  border-radius: 25px;
+  /* padding: 1rem; */
+}
+.column {
+  min-width: 30%;
+  /* padding: 1rem; */
+  display: inline-block;
+}
+
+.column-right {
+  float: right;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.author-image {
+  display: inline;
+  padding-left: 1rem;
+}
+.aboutme-content {
+  scroll-snap-align: start;
+  /* max-width: 90vw; */
+  margin: 2% 2%;
+  display: inline;
+  flex-direction: column;
+}
+
+.column h1 {
+  max-width: 100%;
+}
+
+/* Home page -  project section*/
+.project-shape {
+  box-shadow: var(--natural-brown) 10px 10px;
+  border-radius: 1rem;
+  max-width: 25vw;
+  min-height: 25vh;
+}
+
+/* Home page -  contact section*/
+/* Home page - Projects */
+/* About page - full about me section */
+/* About page - Testimonials section */
+/* About page - Resume section*/
+/* Projects page */
+
+/* Components - Hamburger Menu */
+/* Components - Project Cards */
+
+
+/* Components - Skills blocks */
+ 
+.items {
+  margin: 0 auto;
+}
+
+.aboutme-content {
+  max-width: 60vw;
+  margin-top: 15vh;
+}
+
+.about-button {
+  margin-left: 40%;
+}
+
+.title {
+  font-size: 4em;
+  margin-top: clamp(2, 1rem + 5vw, 4rem);
+  font-size: clamp(4rem, 1rem + 5vw, 6rem);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.project-content {
+  /* font-size: clamp(12px, 10px + 5px, 1rem); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+}
+
+@media screen and (max-width: 40rem) {
+  body {
+    overflow-y: none;
+  }
+
+  section {
+    overflow-y: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .landing-content {
+    padding-top: 0;
+  }
+
+
+  .logo {
+    left: 55%;
+  }
+
+  .aboutme-content {
+    max-width: 90vw;
+    margin-top: 1vh;
+  }
+  .about-section {
+    flex-direction: column;
+  }
+  .project-card {
+    margin: 1% 1%;
+    min-width: 50vw;
+    max-width: 80%;
+    min-height: 25vh;
+    overflow-y: scroll;
+  }
+
+  .skills-title {
+    display: inline;
+    left: 50%;
+    box-shadow: var(--natural-brown) 3vw 3vw;
+    border-radius: 25px;
+  
+
+  }
+  .popover {
+    left : 25%;
+    position: absolute;
+    }
+
+  .project-content {
+    font-size: clamp(1rem, 1vw + 5vw, 3rem);
+  }
+
+ 
+  .project-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .author-image {
+    padding: 1rem 1rem;
+  }
+
+  #skill-type {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+  }
+  .skill-card {
+    flex-direction: column;
+    min-width: 90vw;
+  }
+
+  .skill-shape {
+    display: inline;
+  }
+}
+
+section.accent-background {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.bottom-links {
+  /* padding: 1%; */
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.spinning {
+  opacity: 0;
+  margin-bottom: 0;
+}
+.spinning:after {
+  opacity: 1;
+}
+
+.spinning:nth-of-type(1) {
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+}
+
+.spinning:nth-of-type(2) {
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-delay: 1.75s;
+}
+
+.spinning:nth-of-type(3) {
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-delay: 3.25s;
+}
+
+.spinning:nth-of-type(4) {
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-delay: 4.75s;
+}
+
+.spinning:nth-of-type(5) {
+  animation-name: rotate-last;
+  animation-duration: 1.5s;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+
+  20%,
+  80% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -25px, 0);
+  }
+}
+
+@keyframes rotate-last {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
