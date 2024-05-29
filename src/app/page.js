@@ -16,7 +16,7 @@ export default function Home() {
         <div class="landing-content">
           <h1 class="text-6xl mt-24">Author Name</h1>
           <div class="landing-animation relative">
-            <span class="text-3xl accent spinning absolute ">
+            <span class="text-3xl accent spinning absolute">
               Photographer{" "}
             </span>
             <span class="text-3xl accent spinning absolute ">
